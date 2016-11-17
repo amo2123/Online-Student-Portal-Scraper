@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        button {
+            border: 20px black;
+            color: blueviolet;
+            background-color: white;
+            font-size: 30px;
+        }
+
+        button:hover {
+            border: 2px black;
+            color: blueviolet;
+            background-color: white;
+            font-size: 30px;
+        }
+
+        #form1 {
+            visibility: hidden;
+        }
+
+        #form2 {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+<button onclick="onClick(this)" id="button1">Faculty Login</button>
+<button onclick="onClick(this)" id="button2">Student Login</button>
+<form action="teacher.html" id="form1">
+    <fieldset>
+        <legend>Faculty Login</legend> Employee ID:
+        <br>
+        <input type="text" name="emp_id" value="">
+        <br> Password:
+        <br>
+        <input type="password" name="password" value="">
+        <br>
+        <br>
+        <input type="submit" value="Submit"> </fieldset>
+</form>
+<form action="/users/login" method="post" id="form2">
+    <fieldset>
+        <legend>Student Login</legend> Registration ID:
+        <br>
+        <input type="text" name="reg_id" value="">
+        <br> Last name:
+        <br>
+        <input type="password" name="password" value="">
+        <br>
+        <br>
+        <input type="submit" value="Submit"> </fieldset>
+</form>
+</body>
+<script>
+    function onClick(x) {
+        if (x.id === 'button1') document.getElementById("form1").style.visibility = "visible";
+        if (x.id === 'button2') document.getElementById("form2").style.visibility = "visible";
+    }
+</script>
+
+</html>
